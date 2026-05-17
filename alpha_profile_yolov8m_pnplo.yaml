@@ -1,0 +1,83 @@
+detector: yolov8m
+dataset: PnPLO
+K_bands: 4
+scheme: linear
+F1_clean: 0.7793427230046948
+eval_params:
+  conf: 0.25
+  iou: 0.5
+  split: test
+  n_images: 235
+mask_design:
+  channel: luminance_Y_only
+  preserve: Cb_Cr_chroma
+  rationale: "consistent with BFPI \u03C1_k computed on Y"
+alpha:
+  band_1: 0.5723951983918971
+  band_2: 0.3218163177967526
+  band_3: 0.07567256549829754
+  band_4: 0.03011591831305277
+f1_drops:
+  band_1: 0.21558433374294983
+  band_2: 0.12120743964089209
+  band_3: 0.028500972162943894
+  band_4: 0.011342723004694744
+band_metrics:
+  clean:
+    TP: 249.0
+    FP: 68.0
+    FN: 73.0
+    TN: 232.0
+    precision: 0.7854889589905363
+    sensitivity: 0.7732919254658385
+    F1: 0.7793427230046948
+    mAP50: 0.7335017302289908
+    mAP50-95: 0.4909223631048437
+  band_1:
+    TP: 168.0
+    FP: 149.0
+    FN: 111.0
+    TN: 34.0
+    precision: 0.5299684542586751
+    sensitivity: 0.6021505376344086
+    F1: 0.5637583892617449
+    mAP50: 0.2399995325596237
+    mAP50-95: 0.13691167042379795
+  band_2:
+    TP: 180.0
+    FP: 137.0
+    FN: 50.0
+    TN: 223.0
+    precision: 0.5678233438485805
+    sensitivity: 0.782608695652174
+    F1: 0.6581352833638027
+    mAP50: 0.5974016294839651
+    mAP50-95: 0.37873037975182816
+  band_3:
+    TP: 223.0
+    FP: 94.0
+    FN: 54.0
+    TN: 227.0
+    precision: 0.7034700315457413
+    sensitivity: 0.8050541516245487
+    F1: 0.7508417508417509
+    mAP50: 0.673797153926129
+    mAP50-95: 0.4414815470585335
+  band_4:
+    TP: 240.0
+    FP: 77.0
+    FN: 68.0
+    TN: 224.0
+    precision: 0.7570977917981072
+    sensitivity: 0.7792207792207793
+    F1: 0.768
+    mAP50: 0.7098043062233561
+    mAP50-95: 0.4750004692769272
+band_boundaries_pi_units:
+- 0.0
+- 0.25
+- 0.5
+- 0.75
+- 1.0
+checkpoint_path: /content/drive/MyDrive/DOCTOR_PHD/FINAL PROJECT/04_RESULT_TRAIN_KARTHY/YOLO_Denoise_Experiment_Karthy/yolo_denoise_experiment/training_runs/yolov8m_noisy_noise_0/weights/best.pt
+generated_by: P8_02_estimate_alpha__v1__.ipynb
